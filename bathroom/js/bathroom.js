@@ -1,7 +1,7 @@
+import currentButton from "../js/homepage.js";
 
 
-
-
+console.log(currentButton.name);
 
 
 
