@@ -1,4 +1,4 @@
-import currentButton from "../js/homepage.js";
+//import currentButton from "../js/homepage.js";
 
 
 console.log(currentButton.name);

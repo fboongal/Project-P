@@ -1,20 +1,20 @@
 //Working Prototype
 //import currentButton from "../js/homepage.js";
-export {currentButton};
+//export {currentButton};
 
 
 
 //var currentButton;    
 
-$(".pins").append("<button class= 'new_page' id='theater1'  >Theater Bathroom First Floor</button>");
+//$(".pins").append("<button class= 'new_page' id='theater1'  >Theater Bathroom First Floor</button>");
 
-$('#theater1').click(openTheaterLink);
+$('#testing').click(openTheaterLink);
 
 function openTheaterLink(){
 
     currentButton = new newButton("theater1", "/images/theater1.jpg", [2,4,5,2,3], ["This is crazy", "It was pretty firty ngl", "Don't use"]);
     
-    window.open("https://fboongal.github.io/Project-P/bathroom/index.html");
+    //window.open("https://fboongal.github.io/Project-P/Bathrooms-List/Whole-Index/index.html");
 
 }
 
