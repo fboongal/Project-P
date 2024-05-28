@@ -22,20 +22,28 @@
     font-size: 80px;
     background-color: white ;
     position : relative; 
- /*  top : -311px;*/
+    top : -411px;
     left : 12px;
     z-index : 2;
 
 }
 
-#bathroomPrototype { 
+/*#bathroomPrototype { 
     height: 500px;
     top: 83px;
     position: absolute;
     left: 258px;
     z-index: 1;
 }
-
+*/
+.bathroomPrototype {
+    height: 500px;
+    /* top: 83px; */
+    width: 60%;
+    /* position: absolute; */
+    /* left: 258px; */
+    z-index: 1;
+}
 
 .reviewsBox {
     border : solid 3px;
