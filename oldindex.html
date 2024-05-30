@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="./js/homepage.js" DEFER></script>
+    <title>Project P</title>
+</head>
+    
+<body>
+   <h1>ART101 - Project P</h1>
+    <h3>Interactive Map Of UCSC Bathrooms</h3>
+    
+    <!--Im not sure if this will work correctly in the long run but for now it gets the point across.-->
+    <div class="menu-container">
+        <button id="menu-toggle" class="menu-toggle">☰ Menu</button>
+        <div id="menu" class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <img src="./images/bathrooms-area-map-with-pins.png" alt="Interactive Map"
+            width="600" height="600">
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div class="map">
+       
+    </div>
+
+    <!--For the pins on the map. Im not sure how to go about doing this yet honestly.-->
+    <div class="pins">
+        <!-- General -->
+            <!-- Academic Resource Center -->
+            <a href="Bathrooms-List\General\Academic-Resource-Center\index.html" id="academicResourceCenter">
+                <img src="./images/1pin.png">
+            </a>
+            <!-- McHenry Library -->
+            <a href="Bathrooms-List\General\McHenry-Library\index.html" id="mcHenryLibrary">
+                <img src="./images/1pin.png">
+            </a>
+
+        <!-- Music -->
+            <!-- Music Building -->
+            <a href="Bathrooms-List\Music\Music-Building\index.html" id="musicBuilding">
+                
+                <img src="./images/1pin.png">
+            </a>
+            <!-- Recital Hall -->
+            <a href="Bathrooms-List\Music\Recital-Hall\index.html" id="recitalHall">
+                
+                <img src="./images/1pin.png">
+            </a>
+
+        <!-- Theater Arts -->
+            <!-- Main Stage -->
+            <a href="Bathrooms-List\Theater-Arts\Main-Stage\index.html" id="mainStage">
+                <img src="./images/1pin.png">
+            </a>
+            <!-- Media Theater -->
+            <a href="Bathrooms-List\Theater-Arts\Media-Theater\index.html" id="mediaTheater">
+                <img src="./images/1pin.png">
+            </a>
+        
+        <!-- Visual Arts -->
+            <!-- Baskin Visual Arts -->
+            <a href="Bathrooms-List\Visual-Arts\Baskin-Visual-Arts\index.html" id="baskinVisualArts">
+                <img src="./images/1pin.png">
+            </a>
+            <!-- Digital Arts Resource Center -->
+            <a href="Bathrooms-List\Whole-Index\index.html" id="digitalArtsResourceCenter">
+                <img src="./images/1pin.png">
+            </a>
+        <!--Testing out a single index.html-->
+            <a href="Bathrooms-List\Whole-Index\index.html" id="testing">
+                <img src="./images/1pin.png">
+            </a>
+    </div>
+
+    <!--popout window after you click on a pin. This would display more content about the bathroom itself. -->
+    <div class="popoutWindow">
+
+    </div>
+
+</body>
+</html>
+
