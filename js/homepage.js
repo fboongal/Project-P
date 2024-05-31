@@ -10,7 +10,7 @@ $('.general_button').click(function(){
 let TAOw = 0;
 let TAOm = 0;
 
-//using buttons for specific_button
+// Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
   let tabID = $(this).data('location');
   $('.TAO-Women').removeClass('active');
@@ -18,14 +18,17 @@ $('.TAO-Women').click(function(){
   if (TAOw == 0) {
     $('.exTAO-Women').removeClass('hidden');
     $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.TAO-Women').html("Collapse");
     TAOw = 1;
   } else {
     $('.exTAO-Women').addClass('hidden');
     $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $('.TAO-Women').html("Expand");
     TAOw = 0;
   }
 })
 
+// Togglable button for TAO Men Tab
 $('.TAO-Men').click(function(){
   let tabID = $(this).data('location');
   $('.TAO-Men').removeClass('active');
@@ -33,10 +36,12 @@ $('.TAO-Men').click(function(){
   if (TAOm == 0) {
     $('.exTAO-Men').removeClass('hidden');
     $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.TAO-Men').html("Collapse");
     TAOm = 1;
   } else {
     $('.exTAO-Men').addClass('hidden');
     $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $('.TAO-Men').html("Expand");
     TAOm = 0;
   }
 })
