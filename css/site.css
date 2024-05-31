@@ -20,11 +20,13 @@ body {
     border: solid;
     color:black;
     padding: 10px;
+    background-color: white;
 }
 
 .minor-div {
     border: solid;
     color:black;
+    background-color: white;
 }
 
 .thumbnail {
