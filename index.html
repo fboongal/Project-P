@@ -19,12 +19,12 @@
 
     <div class="minor-section">
         <h2>Click on a button!</h2>
-        <button data-location="TAO">Theater Arts Offices</button>
-        <button data-location="S2">Stage 2 Bathrooms</button>
-        <button data-location="S5">Stage 5 Bathrooms</button>
-        <button data-location="MT">Media Theater</button>
-        <button data-location="NB">Visual Arts N Building</button>
-        <button data-location="BB">Visual Arts B Building</button>
+        <button class = "general_button" data-location="TAO">Theater Arts Offices</button>
+        <button class = "general_button" data-location="S2">Stage 2 Bathrooms</button>
+        <button class = "general_button" data-location="S5">Stage 5 Bathrooms</button>
+        <button class = "general_button" data-location="MT">Media Theater</button>
+        <button class = "general_button" data-location="NB">Visual Arts N Building</button>
+        <button class = "general_button" data-location="BB">Visual Arts B Building</button>
     </div>
     
     <br>
@@ -41,7 +41,12 @@
 
             <div class="text-padding">
                 <h2>TAO Women's Restroom</h2>
-                <p>text of bathroom</p>  
+                <p>text of bathroom</p>
+                    <div class="exTAO-Women hidden" data-location="TAO-Women-Expand">
+                        <p>tags of bathroom</p>
+                        <p>reviews of bathroom</p>
+                    </div>  
+                <button class="TAO-Women" data-location="TAO-Women-Expand">Expand</button>    
             </div>
         </div>
 
@@ -54,7 +59,12 @@
             
             <div class="text-padding">
                 <h2>TAO Men's Restroom</h2>
-                <p>text of bathroom</p>  
+                <p>text of bathroom</p> 
+                    <div class="exTAO-Men hidden" data-location="TAO-Men-Expand">
+                        <p>tags of bathroom</p>
+                        <p>reviews of bathroom</p>
+                    </div> 
+                <button class="TAO-Men" data-location="TAO-Men-Expand">Expand</button>    
             </div>   
         </div> 
 
