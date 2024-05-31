@@ -44,3 +44,11 @@ body {
 .tab-pane.active {
     display: block;
 }
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
