@@ -13,7 +13,7 @@ body {
     flex-direction: column; /* Arrange items in a column */
     justify-content: center;
     align-items: center;
-    height: 5vh; /* Full height of the viewport */
+    height: 3vh; /* Full height of the viewport */
     margin: 0;
     background-color: #f0f0f0; /* Optional: background color for better visibility */
 }
@@ -22,7 +22,7 @@ body {
     border: solid;
     color:black;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(212, 212, 212);
     text-align: center;
 }
 
@@ -58,12 +58,6 @@ body {
     display: none;
 }
 
-.center{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
 
 img.center {
     width: 500px; /* Adjust this value as needed */
