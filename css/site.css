@@ -9,24 +9,29 @@ html {
 }
 
 body {
-    width: 80%;
-    margin: auto;
-    padding: 0;
-    max-width: 601px;
-    min-width: 601px;
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center;
+    align-items: center;
+    height: 3vh; /* Full height of the viewport */
+    margin: 0;
+    background-color: #f0f0f0; /* Optional: background color for better visibility */
 }
 
 .minor-section {
     border: solid;
     color:black;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(212, 212, 212);
+    text-align: center;
 }
 
 .minor-div {
     border: solid;
     color:black;
     background-color: white;
+    padding-inline: 150px;
+
 }
 
 .thumbnail {
@@ -43,4 +48,31 @@ body {
 
 .tab-pane.active {
     display: block;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+img.center {
+    width: 500px; /* Adjust this value as needed */
+    height: 500px; /* Maintain the aspect ratio */
+    max-width: 100%;
+}
+
+.background-image-container {
+    height: 100vh; /* Full height */
+    background-image: url('./images\white-square-tiled-texture-background.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
