@@ -18,24 +18,34 @@ body {
     background-color: #f0f0f0; /* Optional: background color for better visibility */
 }
 
+img {
+    border-radius: 5px;
+}
+
 .minor-section {
     border: solid;
+    border-radius: 15px;
     color:black;
     padding: 10px;
     background-color: rgb(212, 212, 212);
     text-align: center;
+    min-width: 720px
 }
 
 .minor-div {
     border: solid;
+    border-radius: 15px;
     color:black;
     background-color: white;
-    padding-inline: 150px;
+    padding: 10px;
+    min-height: 200px;
+    min-width: 700px;
+    float: center;
 
 }
 
 .thumbnail {
-    float: inline-start;
+    float: left
 }
 
 .text-padding {
@@ -75,4 +85,16 @@ img.center {
     align-items: center;
     color: white;
     text-align: center;
+}
+
+.point {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1, h2, h3, p {
+    cursor: context-menu;
 }
