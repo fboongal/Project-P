@@ -14,6 +14,8 @@ let BBm = 0;
 
 //change the id of the button to general_button
 $('.general_button').click(function(){
+  console.log("1");
+  console.log("this is " + this);
   let tabID = $(this).data('location');
   $('.general_button').removeClass('active');
   $(this).addClass('active');
@@ -236,3 +238,51 @@ $('.BB-Men').click(function(){
     BBm = 0;
   }
 })
+
+//
+//Pin Buttons
+//
+//Media Theater Pin
+//Defines what happens with the click event 
+$(".mediaTheaterPin").click(function(){
+//"this" is the thing that is clicked and data is a method that takes the parameter of the location
+  let tabID = $(this).data('location');
+  $('.tab-pane').removeClass('active');
+  $('[data-location-content="' + tabID + '"]').addClass('active');
+})
+
+//Second Stage Bathroom Pin
+$(".secondStageBathroomPin").click(function(){
+  let tabID = $(this).data('location');
+  $('.tab-pane').removeClass('active');
+  $('[data-location-content="' + tabID + '"]').addClass('active');
+})
+
+//Fifth Stage Bathroom Pin 
+$(".fifthStageBathroomPin").click(function(){
+  let tabID = $(this).data('location');
+  $('.tab-pane').removeClass('active');
+  $('[data-location-content="' + tabID + '"]').addClass('active');
+})
+
+//Theater Arts Offices Pin
+$(".theaterArtsOfficesPin").click(function(){
+  let tabID = $(this).data('location');
+  $('.tab-pane').removeClass('active');
+  $('[data-location-content="' + tabID + '"]').addClass('active');
+})
+
+//N Art Building Pin
+$(".nArtBuildingPin").click(function(){
+  let tabID = $(this).data('location');
+  $('.tab-pane').removeClass('active');
+  $('[data-location-content="' + tabID + '"]').addClass('active');
+})
+
+//B Art Building Pin
+$(".bArtBuildingPin").click(function(){
+  let tabID = $(this).data('location');
+  $('.tab-pane').removeClass('active');
+  $('[data-location-content="' + tabID + '"]').addClass('active');
+})
+
