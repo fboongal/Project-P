@@ -11,17 +11,19 @@ let NBw = 0;
 let NBm = 0;
 let BBw = 0;
 let BBm = 0;
+let DARCw = 0;
+let DARCm = 0;
 
-//change the id of the button to general_button
-$('.general_button').click(function(){
-  console.log("1");
-  console.log("this is " + this);
-  let tabID = $(this).data('location');
-  $('.general_button').removeClass('active');
-  $(this).addClass('active');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
-});
+// Temporary Buttons
+// $('.general_button').click(function(){
+//   console.log("1");
+//   console.log("this is " + this);
+//   let tabID = $(this).data('location');
+//   $('.general_button').removeClass('active');
+//   $(this).addClass('active');
+//   $('.tab-pane').removeClass('active');
+//   $('[data-location-content="' + tabID + '"]').addClass('active');
+// });
 
 // Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
@@ -59,7 +61,7 @@ $('.TAO-Men').click(function(){
   }
 })
 
-//Togglable button for S2 Women
+// Togglable button for S2 Women
 $('.S2-Women').click(function(){
   let tabID = $(this).data('location');
   $('.S2-Women').removeClass('active');
@@ -77,7 +79,7 @@ $('.S2-Women').click(function(){
   }
 })
 
-//Togglable button for S2 Men
+// Togglable button for S2 Men
 $('.S2-Men').click(function(){
   let tabID = $(this).data('location');
   $('.S2-Men').removeClass('active');
@@ -95,7 +97,7 @@ $('.S2-Men').click(function(){
   }
 })
 
-//Togglable button for S5 Women
+// Togglable button for S5 Women
 $('.S5-Women').click(function(){
   let tabID = $(this).data('location');
   $('.S5-Women').removeClass('active');
@@ -113,7 +115,7 @@ $('.S5-Women').click(function(){
   }
 })
 
-//Togglable button for S5 Men
+// Togglable button for S5 Men
 $('.S5-Men').click(function(){
   let tabID = $(this).data('location');
   $('.S5-Men').removeClass('active');
@@ -131,7 +133,7 @@ $('.S5-Men').click(function(){
   }
 })
 
-//Togglable button for MT Women
+// Togglable button for MT Women
 $('.MT-Women').click(function(){
   let tabID = $(this).data('location');
   $('.MT-Women').removeClass('active');
@@ -149,7 +151,7 @@ $('.MT-Women').click(function(){
   }
 })
 
-//Togglable button for MT Men
+// Togglable button for MT Men
 $('.MT-Men').click(function(){
   let tabID = $(this).data('location');
   $('.MT-Men').removeClass('active');
@@ -167,7 +169,7 @@ $('.MT-Men').click(function(){
   }
 })
 
-//Togglable button for NB Women
+// Togglable button for NB Women
 $('.NB-Women').click(function(){
   let tabID = $(this).data('location');
   $('.NB-Women').removeClass('active');
@@ -185,7 +187,7 @@ $('.NB-Women').click(function(){
   }
 })
 
-//Togglable button for NB Men
+// Togglable button for NB Men
 $('.NB-Men').click(function(){
   let tabID = $(this).data('location');
   $('.NB-Men').removeClass('active');
@@ -203,7 +205,7 @@ $('.NB-Men').click(function(){
   }
 })
 
-//Togglable button for BB Women
+// Togglable button for BB Women
 $('.BB-Women').click(function(){
   let tabID = $(this).data('location');
   $('.BB-Women').removeClass('active');
@@ -221,7 +223,7 @@ $('.BB-Women').click(function(){
   }
 })
 
-//Togglable button for BB Men
+// Togglable button for BB Men
 $('.BB-Men').click(function(){
   let tabID = $(this).data('location');
   $('.BB-Men').removeClass('active');
@@ -239,50 +241,168 @@ $('.BB-Men').click(function(){
   }
 })
 
-//
-//Pin Buttons
-//
-//Media Theater Pin
-//Defines what happens with the click event 
-$(".mediaTheaterPin").click(function(){
-//"this" is the thing that is clicked and data is a method that takes the parameter of the location
+// Togglable button for DARC Women
+$('.DARC-Women').click(function(){
   let tabID = $(this).data('location');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
+  $('.DARC-Women').removeClass('active');
+  $(this).addClass('active');
+  if (DARCw == 0) {
+    $('.exDARC-Women').removeClass('hidden');
+    $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.DARC-Women').html("Collapse");
+    DARCw = 1;
+  } else {
+    $('.exDARC-Women').addClass('hidden');
+    $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $('.DARC-Women').html("Expand");
+    DARCw = 0;
+  }
 })
 
-//Second Stage Bathroom Pin
-$(".secondStageBathroomPin").click(function(){
+// Togglable button for DARC Men
+$('.DARC-Men').click(function(){
   let tabID = $(this).data('location');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
+  $('.DARC-Men').removeClass('active');
+  $(this).addClass('active');
+  if (DARCm == 0) {
+    $('.exDARC-Men').removeClass('hidden');
+    $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.DARC-Men').html("Collapse");
+    DARCm = 1;
+  } else {
+    $('.exDARC-Men').addClass('hidden');
+    $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $(this).html("Expand");
+    DARCm = 0;
+  }
 })
 
-//Fifth Stage Bathroom Pin 
-$(".fifthStageBathroomPin").click(function(){
-  let tabID = $(this).data('location');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
-})
 
-//Theater Arts Offices Pin
-$(".theaterArtsOfficesPin").click(function(){
-  let tabID = $(this).data('location');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
-})
 
-//N Art Building Pin
-$(".nArtBuildingPin").click(function(){
-  let tabID = $(this).data('location');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
-})
 
-//B Art Building Pin
-$(".bArtBuildingPin").click(function(){
-  let tabID = $(this).data('location');
-  $('.tab-pane').removeClass('active');
-  $('[data-location-content="' + tabID + '"]').addClass('active');
-})
+
+
+// Pin Buttons
+
+// Media Theater Pin
+// Defines what happens with the click event 
+$(document).ready(function() {
+  $(".mediaTheaterPin").click(function() {
+      let tabID = $(this).data('location');
+      let tabContent = $('[data-location-content="' + tabID + '"]');
+      
+      if (tabContent.hasClass('active')) {
+          tabContent.removeClass('active');
+          $(".title").html("");
+      } else {
+          $('.tab-pane').removeClass('active');
+          tabContent.addClass('active');
+          $(".title").html("<p>Media Theater</p>");
+      }
+  });
+});
+
+// Second Stage Bathroom Pin
+$(document).ready(function() {
+  $(".secondStageBathroomPin").click(function(){
+    let tabID = $(this).data('location');
+    let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    if (tabContent.hasClass('active')) {
+        tabContent.removeClass('active');
+        $(".title").html("");
+    } else {
+      $('.tab-pane').removeClass('active');
+      tabContent.addClass('active');
+      $(".title").html("<p>Second Stage Restrooms</p>");
+    }
+  });
+});
+
+// Fifth Stage Bathroom Pin 
+$(document).ready(function() {
+  $(".fifthStageBathroomPin").click(function(){
+    let tabID = $(this).data('location');
+    let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    if (tabContent.hasClass('active')) {
+        tabContent.removeClass('active');
+        $(".title").html("");
+    } else {
+      $('.tab-pane').removeClass('active');
+      tabContent.addClass('active');
+      $(".title").html("<p>Fifth Stage Restrooms</p>");
+    }
+  });
+});
+
+// Theater Arts Offices Pin
+$(document).ready(function() {
+  $(".theaterArtsOfficesPin").click(function(){
+    let tabID = $(this).data('location');
+    let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    if (tabContent.hasClass('active')) {
+        tabContent.removeClass('active');
+        $(".title").html("");
+    } else {
+      $('.tab-pane').removeClass('active');
+      tabContent.addClass('active');
+      $(".title").html("<p>Theater Arts Offices</p>");
+    }
+  });
+});
+
+// N Art Building Pin
+$(document).ready(function() {
+  $(".nArtBuildingPin").click(function(){
+    let tabID = $(this).data('location');
+    let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    if (tabContent.hasClass('active')) {
+        tabContent.removeClass('active');
+        $(".title").html("");
+    } else {
+      $('.tab-pane').removeClass('active');
+      tabContent.addClass('active');
+      $(".title").html("<p>Visual Arts N Building Restrooms</p>");
+    }
+  });
+});
+
+
+// B Art Building Pin
+$(document).ready(function() {
+  $(".bArtBuildingPin").click(function(){
+    let tabID = $(this).data('location');
+    let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    if (tabContent.hasClass('active')) {
+        tabContent.removeClass('active');
+        $(".title").html("");
+    } else {
+      $('.tab-pane').removeClass('active');
+      tabContent.addClass('active');
+      $(".title").html("<p>Visual Arts B Building Restrooms</p>");
+    }
+  });
+});
+
+// DARC Building Pin
+$(document).ready(function() {
+  $(".digitalArtsResearchCenterPin").click(function(){
+    let tabID = $(this).data('location');
+    let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    if (tabContent.hasClass('active')) {
+        tabContent.removeClass('active');
+        $(".title").html("");
+    } else {
+      $('.tab-pane').removeClass('active');
+      tabContent.addClass('active');
+      $(".title").html("<p>Digital Arts Research Center</p>");
+    }
+  });
+});
+
 
