@@ -4,8 +4,8 @@ https://stackoverflow.com/questions/41405576/margin-right-is-not-working-with-my
 
 html {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 60px;
+    padding: 60px;
 }
 
 body {
@@ -13,8 +13,8 @@ body {
     flex-direction: column; /* Arrange items in a column */
     justify-content: center;
     align-items: center;
-    height: 3vh; /* Full height of the viewport */
-    margin: 0;
+    height: 300px; /* Full height of the viewport */
+    margin: 10;
     background-color: #f0f0f0; /* Optional: background color for better visibility */
 }
 
@@ -24,7 +24,7 @@ img {
 
 .minor-section {
     border: solid;
-    border-radius: 15px;
+    border-radius: 5px;
     color:black;
     padding: 10px;
     background-color: rgb(212, 212, 212);
@@ -38,8 +38,8 @@ img {
     color:black;
     background-color: white;
     padding: 10px;
-    min-height: 200px;
-    min-width: 700px;
+    min-height: 150px;
+    min-width: 150px;
     float: center;
 
 }
