@@ -405,6 +405,24 @@ $(document).ready(function() {
   });
 });
 
+function renderComments() {
+  const commentsContainer = document.getElementById('commentsContainer');
+  commentsContainer.innerHTML = ''; // Clear existing comments
+
+  let comments = JSON.parse(localStorage.getItem('comments')) || [];
+  
+  comments.forEach(comment => {
+      let commentContainer = document.createElement('div');
+      commentContainer.classList.add('comment');
+      
+      let commentContent = document.createElement('p');
+      commentContent.textContent = comment;
+      
+      commentContainer.appendChild(commentContent);
+      commentsContainer.appendChild(commentContainer);
+  });
+}
+
 document.getElementById('commentForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -425,3 +443,6 @@ document.getElementById('commentForm').addEventListener('submit', function(e) {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  renderComments();
+});
