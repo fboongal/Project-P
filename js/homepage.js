@@ -405,4 +405,23 @@ $(document).ready(function() {
   });
 });
 
+document.getElementById('commentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  let commentInput = document.getElementById('commentInput');
+  let commentText = commentInput.value.trim();
+
+  if (commentText !== "") {
+    let commentContainer = document.createElement('div');
+    commentContainer.classList.add('comment');
+
+    let commentContent = document.createElement('p');
+    commentContent.textContent = commentText;
+
+    commentContainer.appendChild(commentContent);
+    document.getElementById('commentsContainer').appendChild(commentContainer);
+
+    commentInput.value = "";
+  }
+});
 
