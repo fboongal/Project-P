@@ -9,10 +9,10 @@ let MTw = 0;
 let MTm = 0;
 let NBw = 0;
 let NBm = 0;
-let BBw = 0;
-let BBm = 0;
+let BBag = 0;
 let DARCw = 0;
 let DARCm = 0;
+let DARCag = 0;
 
 // Temporary Buttons
 // $('.general_button').click(function(){
@@ -205,39 +205,21 @@ $('.NB-Men').click(function(){
   }
 })
 
-// Togglable button for BB Women
-$('.BB-Women').click(function(){
+// Togglable button for BB All-Gender
+$('.BB-AG').click(function(){
   let tabID = $(this).data('location');
-  $('.BB-Women').removeClass('active');
+  $('.BB-AG').removeClass('active');
   $(this).addClass('active');
-  if (BBw == 0) {
-    $('.exBB-Women').removeClass('hidden');
+  if (BBag == 0) {
+    $('.exBB-AG').removeClass('hidden');
     $('[data-location-content="' + tabID + '"]').addClass('active');
-    $('.BB-Women').html("Collapse");
-    BBw = 1;
+    $('.BB-AG').html("Collapse");
+    BBag = 1;
   } else {
-    $('.exBB-Women').addClass('hidden');
+    $('.exBB-AG').addClass('hidden');
     $('[data-location-content="' + tabID + '"]').removeClass('active');
-    $('.BB-Women').html("Expand");
-    BBw = 0;
-  }
-})
-
-// Togglable button for BB Men
-$('.BB-Men').click(function(){
-  let tabID = $(this).data('location');
-  $('.BB-Men').removeClass('active');
-  $(this).addClass('active');
-  if (BBm == 0) {
-    $('.exBB-Men').removeClass('hidden');
-    $('[data-location-content="' + tabID + '"]').addClass('active');
-    $('.BB-Men').html("Collapse");
-    BBm = 1;
-  } else {
-    $('.exBB-Men').addClass('hidden');
-    $('[data-location-content="' + tabID + '"]').removeClass('active');
-    $('.BB-Men').html("Expand");
-    BBm = 0;
+    $('.BB-AG').html("Expand");
+    BBag = 0;
   }
 })
 
@@ -274,6 +256,24 @@ $('.DARC-Men').click(function(){
     $('[data-location-content="' + tabID + '"]').removeClass('active');
     $(this).html("Expand");
     DARCm = 0;
+  }
+})
+
+// Togglable button for DARC All-Gender Restrooms
+$('.DARC-AG').click(function(){
+  let tabID = $(this).data('location');
+  $('.DARC-AG').removeClass('active');
+  $(this).addClass('active');
+  if (DARCag == 0) {
+    $('.exDARC-AG').removeClass('hidden');
+    $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.DARC-AG').html("Collapse");
+    DARCag = 1;
+  } else {
+    $('.exDARC-AG').addClass('hidden');
+    $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $(this).html("Expand");
+    DARCag = 0;
   }
 })
 
