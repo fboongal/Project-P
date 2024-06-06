@@ -424,25 +424,30 @@ function renderComments() {
 }
 
 document.getElementById('commentForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
+  e.preventDefault(); // Prevent the form from submitting the traditional way
+
   let commentInput = document.getElementById('commentInput');
   let commentText = commentInput.value.trim();
 
   if (commentText !== "") {
-    let commentContainer = document.createElement('div');
-    commentContainer.classList.add('comment');
+      // Retrieve existing comments from local storage
+      let comments = JSON.parse(localStorage.getItem('comments')) || [];
+      
+      // Add new comment to the array
+      comments.push(commentText);
+      
+      // Save the updated comments array back to local storage
+      localStorage.setItem('comments', JSON.stringify(comments));
 
-    let commentContent = document.createElement('p');
-    commentContent.textContent = commentText;
+      // Render the updated comments
+      renderComments();
 
-    commentContainer.appendChild(commentContent);
-    document.getElementById('commentsContainer').appendChild(commentContainer);
-
-    commentInput.value = "";
+      // Clear the input after adding the comment
+      commentInput.value = "";
   }
 });
 
+// Initial render of comments on page load
 document.addEventListener('DOMContentLoaded', function() {
   renderComments();
 });
