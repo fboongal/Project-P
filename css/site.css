@@ -4,18 +4,20 @@ https://stackoverflow.com/questions/41405576/margin-right-is-not-working-with-my
 
 html {
     width: 100%;
-    margin: 60px;
+    margin: 0;
     padding: 60px;
 }
 
 body {
     display: flex;
     flex-direction: column; /* Arrange items in a column */
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
-    height: 300px; /* Full height of the viewport */
-    margin: 10;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
     background-color: #f0f0f0; /* Optional: background color for better visibility */
+    background-size: cover;
+    background-position: center;
 }
 
 img {
