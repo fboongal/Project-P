@@ -9,21 +9,10 @@ let MTw = 0;
 let MTm = 0;
 let NBw = 0;
 let NBm = 0;
-let BBw = 0;
-let BBm = 0;
+let BBag = 0;
 let DARCw = 0;
 let DARCm = 0;
-
-// Temporary Buttons
-// $('.general_button').click(function(){
-//   console.log("1");
-//   console.log("this is " + this);
-//   let tabID = $(this).data('location');
-//   $('.general_button').removeClass('active');
-//   $(this).addClass('active');
-//   $('.tab-pane').removeClass('active');
-//   $('[data-location-content="' + tabID + '"]').addClass('active');
-// });
+let DARCag = 0;
 
 // Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
@@ -206,20 +195,20 @@ $('.NB-Men').click(function(){
 })
 
 // Togglable button for BB Women
-$('.BB-Women').click(function(){
+$('.BB-AG').click(function(){
   let tabID = $(this).data('location');
-  $('.BB-Women').removeClass('active');
+  $('.BB-AG').removeClass('active');
   $(this).addClass('active');
-  if (BBw == 0) {
-    $('.exBB-Women').removeClass('hidden');
+  if (BBag == 0) {
+    $('.exBB-AG').removeClass('hidden');
     $('[data-location-content="' + tabID + '"]').addClass('active');
-    $('.BB-Women').html("Collapse");
-    BBw = 1;
+    $('.BB-AG').html("Collapse");
+    BBag = 1;
   } else {
-    $('.exBB-Women').addClass('hidden');
+    $('.exBB-AG').addClass('hidden');
     $('[data-location-content="' + tabID + '"]').removeClass('active');
-    $('.BB-Women').html("Expand");
-    BBw = 0;
+    $('.BB-AG').html("Expand");
+    BBag = 0;
   }
 })
 
@@ -277,6 +266,29 @@ $('.DARC-Men').click(function(){
   }
 })
 
+// Togglable button for DARC All-Gender
+$('.DARC-AG').click(function(){
+  let tabID = $(this).data('location');
+  $('.DARC-AG').removeClass('active');
+  $(this).addClass('active');
+  if (DARCag == 0) {
+    $('.exDARC-AG').removeClass('hidden');
+    $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.DARC-AG').html("Collapse");
+    DARCag = 1;
+  } else {
+    $('.exDARC-AG').addClass('hidden');
+    $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $(this).html("Expand");
+    DARCag = 0;
+  }
+})
+
+
+
+
+
+
 
 
 
@@ -293,7 +305,7 @@ $(document).ready(function() {
       
       if (tabContent.hasClass('active')) {
           tabContent.removeClass('active');
-          $(".title").html("");
+          $(".title").html("<p>Click a Pin!</p>");
       } else {
           $('.tab-pane').removeClass('active');
           tabContent.addClass('active');
@@ -310,7 +322,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -327,7 +339,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -344,7 +356,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -361,7 +373,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -379,7 +391,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -396,7 +408,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -405,6 +417,17 @@ $(document).ready(function() {
   });
 });
 
+
+
+
+
+
+
+
+
+
+
+// comments section
 function renderComments() {
   const commentsContainer = document.getElementById('commentsContainer');
   commentsContainer.innerHTML = ''; // Clear existing comments
@@ -451,6 +474,18 @@ document.getElementById('commentForm').addEventListener('submit', function(e) {
 document.addEventListener('DOMContentLoaded', function() {
   renderComments();
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Slideshow JavaScript
 let slideIndex = 1;
