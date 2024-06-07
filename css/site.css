@@ -1,11 +1,17 @@
 /* Citations:
 https://stackoverflow.com/questions/41405576/margin-right-is-not-working-with-my-html-how-can-i-center-my-content
+https://www.w3schools.com/css/css_image_transparency.asp
+https://www.w3schools.com/css/css_positioning.asp
+https://stackoverflow.com/questions/63541670/how-to-position-a-button-on-website-using-html-css
+https://stackoverflow.com/questions/23310736/two-p-tag-in-same-line
+https://stackoverflow.com/questions/42080123/controlling-the-amount-of-space-in-justify-content-space-between
 */
 
 html {
     width: 100%;
     margin: 0;
     padding: 60px;
+    font-family: Verdana;
 }
 
 body {
@@ -23,34 +29,68 @@ img {
     border-radius: 5px;
 }
 
+#tag-section {
+    margin: 0;
+    display: flex;
+    padding-inline: 20px;
+    margin-inline-start: 225px;
+}
+
+#tag {
+    margin: 2px;
+    background-color: rgb(206, 206, 206);
+    color: rgb(0, 0, 0);
+    border-radius: 9px;
+    padding: 4px;
+    cursor: context-menu;
+}
+
+#tag:hover {
+    background-color: rgb(194, 194, 194);
+}
+
 .minor-section {
-    border: solid;
-    border-radius: 5px;
+    /* border: solid; */
+    border-radius: 15px;
     color:black;
     padding: 10px;
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(212, 212, 212, 80%);
+    min-width: 720px;
     text-align: center;
-    min-width: 720px
+    position: relative;
 }
 
 .minor-div {
-    border: solid;
+    /* border: solid; */
     border-radius: 15px;
     color:black;
-    background-color: white;
+    background-color: rgb(248, 248, 248);
     padding: 10px;
     min-height: 225px;
     min-width: 150px;
+    max-width: 720px;
     float: center;
+    text-align: left;
+    position: relative;
+}
 
+.minor-div p {
+    margin-inline-start: 250px;
+}
+
+.minor-div h2 {
+    margin-inline-start: 250px;
+}
+
+/* expand button positioning */
+.TAO-Women, .TAO-Men, .S2-Women, .S2-Men, .S5-Women, .S5-Men, .MT-Women, .MT-Men, .NB-Women, .NB-Men, .BB-AG, .DARC-Women, .DARC-Men, .DARC-AG{
+    position: absolute;
+    left: 85%;
+    top: 80%
 }
 
 .thumbnail {
     float: left
-}
-
-.text-padding {
-    padding-inline: 150px;
 }
 
 .tab-pane {
@@ -59,6 +99,7 @@ img {
 
 .tab-pane.active {
     display: block;
+    background-color: rgb(255, 255, 255, 0%);
 }
 
 .active {
@@ -89,10 +130,6 @@ img.center {
 }
 
 .point {
-    cursor: pointer;
-}
-
-button {
     cursor: pointer;
 }
 
@@ -136,6 +173,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    cursor: pointer;
 }
 
 button:hover {
@@ -144,6 +182,10 @@ button:hover {
 
 #commentsContainer {
     margin-top: 20px;
+}
+
+.comment-section {
+    position: relative;
 }
 
 .comment {
