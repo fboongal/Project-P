@@ -29,6 +29,58 @@ img {
     border-radius: 5px;
 }
 
+#floor-tabs {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    left: 83%;
+    top:5%;
+    cursor: context-menu;
+}
+
+.wtab, .mtab, .agtab {
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    background-color: rgb(230, 230, 230);
+    color: rgb(148, 148, 148);
+    border-radius: 3px;
+    width: 30px;
+    left: 400px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.fakeTab {
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    width: 30px;
+    left: 400px;
+    cursor: context-menu;
+    padding: 2px;
+    opacity: 0;
+}
+
+.wtab.active, .mtab.active, .agtab.active {
+    background-color: #2968b1;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.wtab.active:hover, .mtab.active:hover, .agtab.active:hover {
+    background-color: #2968b1;
+    color: #fff;
+}
+
+.wtab:hover, .mtab:hover, .agtab:hover {
+    background-color: rgb(173, 173, 173);
+    color: rgb(0, 0, 0);
+}
+
 #tag-section {
     margin: 0;
     display: flex;
@@ -168,7 +220,7 @@ textarea {
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #28a745;
+    background-color: #2968b1;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -177,7 +229,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: rgb(43, 125, 219);
 }
 
 #commentsContainer {

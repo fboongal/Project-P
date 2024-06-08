@@ -424,6 +424,65 @@ $(document).ready(function() {
 
 
 
+// Floor tabs for DARC Building
+
+// Womens floor tabs
+$('.wtab').click(function() {
+  // remove active class from previous clicked tab
+  $('.wtab').removeClass('active');
+  // make recent clicked tab green
+  $(this).addClass('active');
+
+  // find and store tab data 
+  let floorNumW = $(this).data('tab');
+  // make all divs with class="floorsDARCBuildingW" hidden
+  $('.floorsDARCBuildingW').addClass('hidden')
+  .then(
+    // find div with the class = to the floorNum and remove hidden class
+    $('.' + floorNumW ).removeClass('hidden'));  
+});
+
+
+
+// Mens floor tabs
+$('.mtab').click(function() {
+  // remove active class from previous clicked tab
+  $('.mtab').removeClass('active');
+  // make recent clicked tab green
+  $(this).addClass('active');
+
+  // find and store tab data 
+  let floorNumM = $(this).data('tab');
+  // make all divs with class="floorsDARCBuildingM" hidden
+  $('.floorsDARCBuildingM').addClass('hidden')
+  .then(
+    // find div with the class = to the floorNum and remove hidden class
+    $('.' + floorNumM ).removeClass('hidden'));  
+});
+
+
+
+// All-Gender floor tabs
+$('.agtab').click(function() {
+  // remove active class from previous clicked tab
+  $('.agtab').removeClass('active');
+  // make recent clicked tab green
+  $(this).addClass('active');
+
+  // find and store tab data 
+  let floorNumAG = $(this).data('tab');
+  // make all divs with class="floorsDARCBuildingAG" hidden
+  $('.floorsDARCBuildingAG').addClass('hidden')
+  .then(
+    // find div with the class = to the floorNum and remove hidden class
+    $('.' + floorNumAG ).removeClass('hidden'));  
+});
+
+
+
+
+
+
 
 
 
@@ -474,11 +533,6 @@ document.getElementById('commentForm').addEventListener('submit', function(e) {
 document.addEventListener('DOMContentLoaded', function() {
   renderComments();
 });
-
-
-
-
-
 
 
 
