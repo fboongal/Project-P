@@ -9,21 +9,10 @@ let MTw = 0;
 let MTm = 0;
 let NBw = 0;
 let NBm = 0;
-let BBw = 0;
-let BBm = 0;
+let BBag = 0;
 let DARCw = 0;
 let DARCm = 0;
-
-// Temporary Buttons
-// $('.general_button').click(function(){
-//   console.log("1");
-//   console.log("this is " + this);
-//   let tabID = $(this).data('location');
-//   $('.general_button').removeClass('active');
-//   $(this).addClass('active');
-//   $('.tab-pane').removeClass('active');
-//   $('[data-location-content="' + tabID + '"]').addClass('active');
-// });
+let DARCag = 0;
 
 // Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
@@ -206,20 +195,20 @@ $('.NB-Men').click(function(){
 })
 
 // Togglable button for BB Women
-$('.BB-Women').click(function(){
+$('.BB-AG').click(function(){
   let tabID = $(this).data('location');
-  $('.BB-Women').removeClass('active');
+  $('.BB-AG').removeClass('active');
   $(this).addClass('active');
-  if (BBw == 0) {
-    $('.exBB-Women').removeClass('hidden');
+  if (BBag == 0) {
+    $('.exBB-AG').removeClass('hidden');
     $('[data-location-content="' + tabID + '"]').addClass('active');
-    $('.BB-Women').html("Collapse");
-    BBw = 1;
+    $('.BB-AG').html("Collapse");
+    BBag = 1;
   } else {
-    $('.exBB-Women').addClass('hidden');
+    $('.exBB-AG').addClass('hidden');
     $('[data-location-content="' + tabID + '"]').removeClass('active');
-    $('.BB-Women').html("Expand");
-    BBw = 0;
+    $('.BB-AG').html("Expand");
+    BBag = 0;
   }
 })
 
@@ -277,6 +266,29 @@ $('.DARC-Men').click(function(){
   }
 })
 
+// Togglable button for DARC All-Gender
+$('.DARC-AG').click(function(){
+  let tabID = $(this).data('location');
+  $('.DARC-AG').removeClass('active');
+  $(this).addClass('active');
+  if (DARCag == 0) {
+    $('.exDARC-AG').removeClass('hidden');
+    $('[data-location-content="' + tabID + '"]').addClass('active');
+    $('.DARC-AG').html("Collapse");
+    DARCag = 1;
+  } else {
+    $('.exDARC-AG').addClass('hidden');
+    $('[data-location-content="' + tabID + '"]').removeClass('active');
+    $(this).html("Expand");
+    DARCag = 0;
+  }
+})
+
+
+
+
+
+
 
 
 
@@ -293,7 +305,7 @@ $(document).ready(function() {
       
       if (tabContent.hasClass('active')) {
           tabContent.removeClass('active');
-          $(".title").html("");
+          $(".title").html("<p>Click a Pin!</p>");
       } else {
           $('.tab-pane').removeClass('active');
           tabContent.addClass('active');
@@ -310,7 +322,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -327,7 +339,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -344,7 +356,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -361,7 +373,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -379,7 +391,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -396,7 +408,7 @@ $(document).ready(function() {
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
-        $(".title").html("");
+        $(".title").html("<p>Click a Pin!</p>");
     } else {
       $('.tab-pane').removeClass('active');
       tabContent.addClass('active');
@@ -415,95 +427,111 @@ $(document).ready(function() {
 
 
 // comment section
-function renderComments() {
-  const commentsContainer = document.getElementById('commentsContainer');
-  commentsContainer.innerHTML = ''; // Clear existing comments
+let commentsData = {};
 
-  let comments = JSON.parse(localStorage.getItem('comments')) || [];
-  
-  comments.forEach((comment, index) => {
-      let commentContainer = document.createElement('div');
-      commentContainer.classList.add('comment');
-      
-      let commentContent = document.createElement('p');
-      commentContent.textContent = comment;
-      
-      let deleteButton = document.createElement('button');
-      deleteButton.classList.add('delete-button');
-      deleteButton.textContent = 'Delete';
-      deleteButton.addEventListener('click', function() {
-          deleteComment(index);
-      });
+// Function to add a comment
+function addComment(productId) {
+    const input = document.querySelector(`.comment-input[data-product-id="${productId}"]`);
+    const commentText = input.value.trim();
 
-      commentContainer.appendChild(commentContent);
-      commentContainer.appendChild(deleteButton);
-      commentsContainer.appendChild(commentContainer);
-  });
+    if (commentText) {
+        if (!commentsData[productId]) {
+            commentsData[productId] = [];
+        }
+        commentsData[productId].push(commentText);
+        displayComments(productId);
+        input.value = '';
+    }
 }
 
-document.getElementById('commentForm').addEventListener('submit', function(e) {
-  e.preventDefault(); // Prevent the form from submitting the traditional way
+// Function to display comments for a product
+function displayComments(productId) {
+    const commentsList = document.getElementById(`comments-${productId}`);
+    commentsList.innerHTML = '';
 
-  let commentInput = document.getElementById('commentInput');
-  let commentText = commentInput.value.trim();
+    if (commentsData[productId]) {
+        commentsData[productId].forEach(comment => {
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+            commentDiv.textContent = comment;
+            commentsList.appendChild(commentDiv);
+        });
+    }
+}
 
-  if (commentText !== "") {
-      // Retrieve existing comments from local storage
-      let comments = JSON.parse(localStorage.getItem('comments')) || [];
-      
-      // Add new comment to the array
-      comments.push(commentText);
-      
-      // Save the updated comments array back to local storage
-      localStorage.setItem('comments', JSON.stringify(comments));
+// Event listener for submit buttons
+document.querySelectorAll('.submit-comment').forEach(button => {
+    button.addEventListener('click', () => {
+        const productId = button.getAttribute('data-product-id');
+        addComment(productId);
+    });
+});
 
-      // Render the updated comments
-      renderComments();
-
-      // Clear the input after adding the comment
-      commentInput.value = "";
-  }
+// Display initial comments if any
+document.addEventListener('DOMContentLoaded', () => {
+    Object.keys(commentsData).forEach(productId => {
+        displayComments(productId);
+    });
 });
 
 // Function to delete a comment
 function deleteComment(index) {
-  let comments = JSON.parse(localStorage.getItem('comments')) || [];
+  let comments = JSON.parse(localStorage.getItem('comment')) || [];
   comments.splice(index, 1); // Remove the comment at the specified index
   localStorage.setItem('comments', JSON.stringify(comments)); // Save the updated comments array back to local storage
   renderComments(); // Re-render the comments
 }
 
 // Initial render of comments on page load
-document.addEventListener('DOMContentLoaded', function() {
-  renderComments();
-});
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Slideshow JavaScript
-let slideIndex = 1;
-showSlides(slideIndex);
+// Intializing Every Bathroom
+let slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11", "mySlides12", "mySlides13", "mySlides14"];
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
+showSlides(1, 4);
+showSlides(1, 5);
+showSlides(1, 6);
+showSlides(1, 7);
+showSlides(1, 8);
+showSlides(1, 9);
+showSlides(1, 10);
+showSlides(1, 11);
+showSlides(1, 12);
+showSlides(1, 13);
 
 // Previous/Next Slide Function
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, no) {
+  showSlides(slideIndex[no] = n, no);
 }
 
-function showSlides(n) {
+function showSlides(n, no) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  x[slideIndex[no]-1].style.display = "block";
 }
