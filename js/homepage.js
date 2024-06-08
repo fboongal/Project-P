@@ -405,20 +405,38 @@ $(document).ready(function() {
   });
 });
 
+
+
+
+
+
+
+
+
+
+// comment section
 function renderComments() {
   const commentsContainer = document.getElementById('commentsContainer');
   commentsContainer.innerHTML = ''; // Clear existing comments
 
   let comments = JSON.parse(localStorage.getItem('comments')) || [];
   
-  comments.forEach(comment => {
+  comments.forEach((comment, index) => {
       let commentContainer = document.createElement('div');
       commentContainer.classList.add('comment');
       
       let commentContent = document.createElement('p');
       commentContent.textContent = comment;
       
+      let deleteButton = document.createElement('button');
+      deleteButton.classList.add('delete-button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.addEventListener('click', function() {
+          deleteComment(index);
+      });
+
       commentContainer.appendChild(commentContent);
+      commentContainer.appendChild(deleteButton);
       commentsContainer.appendChild(commentContainer);
   });
 }
@@ -446,6 +464,14 @@ document.getElementById('commentForm').addEventListener('submit', function(e) {
       commentInput.value = "";
   }
 });
+
+// Function to delete a comment
+function deleteComment(index) {
+  let comments = JSON.parse(localStorage.getItem('comments')) || [];
+  comments.splice(index, 1); // Remove the comment at the specified index
+  localStorage.setItem('comments', JSON.stringify(comments)); // Save the updated comments array back to local storage
+  renderComments(); // Re-render the comments
+}
 
 // Initial render of comments on page load
 document.addEventListener('DOMContentLoaded', function() {
