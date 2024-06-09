@@ -14,6 +14,16 @@ let DARCw = 0;
 let DARCm = 0;
 let DARCag = 0;
 
+
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener('click', function() {
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
+  });
+});
+
 // Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
   let tabID = $(this).data('location');
@@ -580,3 +590,6 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";
 }
+
+
+
