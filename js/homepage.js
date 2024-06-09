@@ -312,7 +312,12 @@ $(document).ready(function() {
   $(".mediaTheaterPin").click(function() {
       let tabID = $(this).data('location');
       let tabContent = $('[data-location-content="' + tabID + '"]');
-      
+
+      const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+      audio.play().catch(error => {
+        console.log('Error:', error);
+      });
+
       if (tabContent.hasClass('active')) {
           tabContent.removeClass('active');
           $(".title").html("<p>Click a Pin!</p>");
@@ -329,6 +334,11 @@ $(document).ready(function() {
   $(".secondStageBathroomPin").click(function(){
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
+    
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
@@ -346,7 +356,12 @@ $(document).ready(function() {
   $(".fifthStageBathroomPin").click(function(){
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
-
+    
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
+    
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
         $(".title").html("<p>Click a Pin!</p>");
@@ -364,6 +379,13 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
+    
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
+    
+
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
         $(".title").html("<p>Click a Pin!</p>");
@@ -380,6 +402,13 @@ $(document).ready(function() {
   $(".nArtBuildingPin").click(function(){
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
+    
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
@@ -399,6 +428,13 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
+    
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
+    
+
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
         $(".title").html("<p>Click a Pin!</p>");
@@ -415,6 +451,13 @@ $(document).ready(function() {
   $(".digitalArtsResearchCenterPin").click(function(){
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
+
+    
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
+    
 
     if (tabContent.hasClass('active')) {
         tabContent.removeClass('active');
@@ -438,6 +481,13 @@ $(document).ready(function() {
 
 // Womens floor tabs
 $('.wtab').click(function() {
+
+  
+  const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  audio.play().catch(error => {
+    console.log('Error:', error);
+  });
+  
   // remove active class from previous clicked tab
   $('.wtab').removeClass('active');
   // make recent clicked tab green
@@ -456,6 +506,13 @@ $('.wtab').click(function() {
 
 // Mens floor tabs
 $('.mtab').click(function() {
+
+  
+  const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  audio.play().catch(error => {
+    console.log('Error:', error);
+  });
+  
   // remove active class from previous clicked tab
   $('.mtab').removeClass('active');
   // make recent clicked tab green
@@ -474,6 +531,13 @@ $('.mtab').click(function() {
 
 // All-Gender floor tabs
 $('.agtab').click(function() {
+
+  
+  const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  audio.play().catch(error => {
+    console.log('Error:', error);
+  });
+  
   // remove active class from previous clicked tab
   $('.agtab').removeClass('active');
   // make recent clicked tab green
