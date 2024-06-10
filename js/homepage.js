@@ -14,7 +14,7 @@ let DARCw = 0;
 let DARCm = 0;
 let DARCag = 0;
 
-
+// audio for background
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', function() {
     //const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
@@ -25,6 +25,12 @@ document.querySelectorAll('button').forEach(button => {
       });
   });
 });
+/* audio references
+https://www.fesliyanstudios.com/royalty-free-music/download/elevator-dreamin/3296
+https://freesound.org/people/PNMCarrieRailfan/sounds/682417/
+https://freesound.org/people/bankfraudd/sounds/145103/
+https://freesound.org/people/ycbcr/sounds/249583/
+*/
 
 // Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
