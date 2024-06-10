@@ -14,7 +14,7 @@ let DARCw = 0;
 let DARCm = 0;
 let DARCag = 0;
 
-
+// audio for background
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', function() {
     //const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
@@ -25,6 +25,12 @@ document.querySelectorAll('button').forEach(button => {
       });
   });
 });
+/* audio references
+
+https://freesound.org/people/PNMCarrieRailfan/sounds/682417/
+https://freesound.org/people/bankfraudd/sounds/145103/
+https://freesound.org/people/ycbcr/sounds/249583/
+*/
 
 // Togglable button for TAO Women Tab
 $('.TAO-Women').click(function(){
@@ -488,10 +494,10 @@ $('.wtab').click(function() {
   // find and store tab data 
   let floorNumW = $(this).data('tab');
   // make all divs with class="floorsDARCBuildingW" hidden
-  $('.floorsDARCBuildingW').addClass('hidden')
-  .then(
-    // find div with the class = to the floorNum and remove hidden class
-    $('.' + floorNumW ).removeClass('hidden'));  
+  $('.floorsDARCBuildingW').addClass('hidden');
+ 
+  // find div with the class = to the floorNum and remove hidden class
+  $('.' + floorNumW ).removeClass('hidden'); 
 });
 
 
@@ -514,10 +520,10 @@ $('.mtab').click(function() {
   // find and store tab data 
   let floorNumM = $(this).data('tab');
   // make all divs with class="floorsDARCBuildingM" hidden
-  $('.floorsDARCBuildingM').addClass('hidden')
-  .then(
-    // find div with the class = to the floorNum and remove hidden class
-    $('.' + floorNumM ).removeClass('hidden'));  
+  $('.floorsDARCBuildingM').addClass('hidden');
+ 
+  // find div with the class = to the floorNum and remove hidden class
+  $('.' + floorNumM ).removeClass('hidden'); 
 });
 
 
@@ -540,10 +546,10 @@ $('.agtab').click(function() {
   // find and store tab data 
   let floorNumAG = $(this).data('tab');
   // make all divs with class="floorsDARCBuildingAG" hidden
-  $('.floorsDARCBuildingAG').addClass('hidden')
-  .then(
-    // find div with the class = to the floorNum and remove hidden class
-    $('.' + floorNumAG ).removeClass('hidden'));  
+  $('.floorsDARCBuildingAG').addClass('hidden');
+ 
+  // find div with the class = to the floorNum and remove hidden class
+  $('.' + floorNumAG ).removeClass('hidden');  
 });
 
 
