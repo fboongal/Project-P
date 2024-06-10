@@ -377,3 +377,152 @@ button:hover {
 #boldText{ 
     font-weight: bold;
 }
+
+/* making the svg pins bounce up when you hover on them  */
+/* I found this from a youtube video called "Learn CSS animations in 20 minutes for Beginners" by Slaying the Dragon 
+https://www.youtube.com/watch?v=SgmNxE9lWcY
+and "Make Awesome SVG Animations with CSS" by Fireship 
+https://www.youtube.com/watch?v=UTHgr6NLeEw */
+
+/* media theater pin animation  */
+.mediaTheaterPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.mediaTheaterPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+/* second stage bathroom pin animation  */
+.secondStageBathroomPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function  */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.secondStageBathroomPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+/* theater offices pin animation  */
+.theaterArtsOfficesPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function  */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.theaterArtsOfficesPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+/* visual arts n pin animation  */
+.nArtBuildingPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function  */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.nArtBuildingPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+/* visual arts b pin animation  */
+.bArtBuildingPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function  */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.bArtBuildingPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+/* DARC pin animation */
+.digitalArtsResearchCenterPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function  */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.digitalArtsResearchCenterPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+/* fifth stage bathroom animation pin */
+.fifthStageBathroomPin {
+    /* listed in order: transition-property, transition-duration, and transition-timing-function  */
+    transition: bounce 0.5s ease-in-out;
+}
+
+.fifthStageBathroomPin:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+
