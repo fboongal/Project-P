@@ -17,11 +17,12 @@ let DARCag = 0;
 
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', function() {
+    //const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
-    audio.volume = 0.5;
-    audio.play().catch(error => {
-      console.log('Error:', error);
-    });
+      audio.volume = 0.5;
+      audio.play().catch(error => {
+        console.log('Error:', error);
+      });
   });
 });
 
@@ -314,11 +315,13 @@ $(document).ready(function() {
       let tabID = $(this).data('location');
       let tabContent = $('[data-location-content="' + tabID + '"]');
 
-      const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
-      audio.volume = 0.5;
-      audio.play().catch(error => {
-        console.log('Error:', error);
-      });
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
+    audio.volume = 0.5;
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
 
       if (tabContent.hasClass('active')) {
           tabContent.removeClass('active');
@@ -337,7 +340,9 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -360,7 +365,9 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -384,7 +391,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -409,7 +418,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -435,7 +446,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -460,7 +473,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -661,8 +676,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Slideshow JavaScript
 // Intializing Every Bathroom
-let slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11", "mySlides12", "mySlides13", "mySlides14"];
+let slideIndex = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11", "mySlides12", "mySlides13", "mySlides14", "mySlides15", "mySlides16", "mySlides17", "mySlides18", "mySlides19"];
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
@@ -677,6 +692,11 @@ showSlides(1, 10);
 showSlides(1, 11);
 showSlides(1, 12);
 showSlides(1, 13);
+showSlides(1, 14);
+showSlides(1, 15);
+showSlides(1, 16);
+showSlides(1, 17);
+showSlides(1, 18);
 
 // Previous/Next Slide Function
 function plusSlides(n, no) {
