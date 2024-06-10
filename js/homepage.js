@@ -206,41 +206,9 @@ $('.NB-Men').click(function(){
   }
 })
 
-// Togglable button for BB Women
-$('.BB-AG').click(function(){
-  let tabID = $(this).data('location');
-  $('.BB-AG').removeClass('active');
-  $(this).addClass('active');
-  if (BBag == 0) {
-    $('.exBB-AG').removeClass('hidden');
-    $('[data-location-content="' + tabID + '"]').addClass('active');
-    $('.BB-AG').html("Collapse");
-    BBag = 1;
-  } else {
-    $('.exBB-AG').addClass('hidden');
-    $('[data-location-content="' + tabID + '"]').removeClass('active');
-    $('.BB-AG').html("Expand");
-    BBag = 0;
-  }
-})
 
-// Togglable button for BB Men
-$('.BB-Men').click(function(){
-  let tabID = $(this).data('location');
-  $('.BB-Men').removeClass('active');
-  $(this).addClass('active');
-  if (BBm == 0) {
-    $('.exBB-Men').removeClass('hidden');
-    $('[data-location-content="' + tabID + '"]').addClass('active');
-    $('.BB-Men').html("Collapse");
-    BBm = 1;
-  } else {
-    $('.exBB-Men').addClass('hidden');
-    $('[data-location-content="' + tabID + '"]').removeClass('active');
-    $('.BB-Men').html("Expand");
-    BBm = 0;
-  }
-})
+
+
 
 // Togglable button for DARC Women
 $('.DARC-Women').click(function(){
