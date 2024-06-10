@@ -18,6 +18,7 @@ let DARCag = 0;
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', function() {
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -314,6 +315,7 @@ $(document).ready(function() {
       let tabContent = $('[data-location-content="' + tabID + '"]');
 
       const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+      audio.volume = 0.5;
       audio.play().catch(error => {
         console.log('Error:', error);
       });
@@ -336,6 +338,7 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -358,6 +361,7 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -381,6 +385,7 @@ $(document).ready(function() {
 
     
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -405,6 +410,7 @@ $(document).ready(function() {
 
     
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -430,6 +436,7 @@ $(document).ready(function() {
 
     
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -448,12 +455,13 @@ $(document).ready(function() {
 
 // DARC Building Pin
 $(document).ready(function() {
-  $(".digitalArtsResearchCenterPin").click(function(){
+  $(".darcPin").click(function(){
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
     const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
     });
@@ -484,6 +492,7 @@ $('.wtab').click(function() {
 
   
   const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  audio.volume = 0.5;
   audio.play().catch(error => {
     console.log('Error:', error);
   });
@@ -509,6 +518,7 @@ $('.mtab').click(function() {
 
   
   const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  audio.volume = 0.5;
   audio.play().catch(error => {
     console.log('Error:', error);
   });
@@ -534,6 +544,7 @@ $('.agtab').click(function() {
 
   
   const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+  audio.volume = 0.5;
   audio.play().catch(error => {
     console.log('Error:', error);
   });
