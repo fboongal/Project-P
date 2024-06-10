@@ -16,7 +16,7 @@ html {
 
 body {
     display: flex;
-    flex-direction: column; /* Arrange items in a column */
+    -ms-flex-align: baseline; /* Arrange items in a column */
     align-items: center;
     height: 100vh; /* Full height of the viewport */
     margin: 0;
