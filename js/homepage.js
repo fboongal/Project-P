@@ -402,7 +402,7 @@ $(document).ready(function() {
 
 // DARC Building Pin
 $(document).ready(function() {
-  $(".digitalArtsResearchCenterPin").click(function(){
+  $(".darcPin").click(function(){
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
 

@@ -433,13 +433,16 @@ https://www.youtube.com/watch?v=UTHgr6NLeEw */
 }
 
 /* DARC pin animation */
-.digitalArtsResearchCenterPin {
+.darcPin {
     /* listed in order: transition-property, transition-duration, and transition-timing-function  */
     transition: bounce 0.5s ease-in-out;
 }
 
-.digitalArtsResearchCenterPin:hover {
+.darcPin:hover {
     animation: bounce 0.5s ease-in-out;
+}
+infinite {
+    transform-origin: bottom;
 }
 
 @keyframes bounce {
