@@ -101,13 +101,30 @@ img {
     background-color: rgb(194, 194, 194);
 }
 
+.title-font {
+    font-size: 28px;
+}
+
+.minor-title {
+    border-radius: 15px;
+    color:black;
+    padding: 10px;
+    background-color: rgb(248, 248, 248);
+    min-height: 102px;
+    min-width: 150px;
+    max-width: 720px;
+    text-align: center;
+    position: relative;
+}
+
 .minor-section {
     /* border: solid; */
     border-radius: 15px;
     color:black;
     padding: 10px;
     background-color: rgb(212, 212, 212, 80%);
-    min-width: 720px;
+    min-width: 740px;
+    max-width: 740;
     text-align: center;
     position: relative;
     margin: 1.5%;
@@ -119,8 +136,8 @@ img {
     color:black;
     background-color: rgb(248, 248, 248);
     padding: 10px;
-    min-height: 225px;
-    min-width: 150px;
+    min-height: 200px;
+    min-width: 720px;
     max-width: 720px;
     float: center;
     text-align: left;
