@@ -248,18 +248,18 @@ button {
 
 .submit-comment {
     position: relative;
-    right: 0;
-    top: 0;
+    right: -141px;
+    top: -20px;
     height: 100%;
     border: none;
-    background-color: #007bff; /* Adjust color as needed */
-    color: white;
+    background-color: #007bff00; /* Adjust color as needed */
+    color: #797979;
     cursor: pointer;
     padding: 0 10px;
 }
 
 .submit-comment:hover {
-    background-color: #0056b3; /* Adjust hover color as needed */
+    background-color: #a4a4a4; /* Adjust hover color as needed */
 }
 
 
