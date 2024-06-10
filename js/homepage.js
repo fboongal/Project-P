@@ -18,13 +18,11 @@ let DARCag = 0;
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', function() {
     //const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
-    const randomIndex = Math.floor(Math.random() * audioFiles.length);
-    const audio = new Audio (audioFiles[randomIndex]);
-    audio.volume = 0.5;
-    audio.play().catch(error => {
-      console.log('Error:', error);
-    });
+    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+      audio.volume = 0.5;
+      audio.play().catch(error => {
+        console.log('Error:', error);
+      });
   });
 });
 
@@ -317,11 +315,13 @@ $(document).ready(function() {
       let tabID = $(this).data('location');
       let tabContent = $('[data-location-content="' + tabID + '"]');
 
-      const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
-      audio.volume = 0.5;
-      audio.play().catch(error => {
-        console.log('Error:', error);
-      });
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
+    audio.volume = 0.5;
+    audio.play().catch(error => {
+      console.log('Error:', error);
+    });
 
       if (tabContent.hasClass('active')) {
           tabContent.removeClass('active');
@@ -340,7 +340,9 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -363,7 +365,9 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -387,7 +391,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -412,7 +418,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -438,7 +446,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
@@ -463,7 +473,9 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
     audio.play().catch(error => {
       console.log('Error:', error);
