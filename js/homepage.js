@@ -315,7 +315,7 @@ $(document).ready(function() {
       let tabID = $(this).data('location');
       let tabContent = $('[data-location-content="' + tabID + '"]');
 
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
@@ -340,7 +340,7 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
@@ -365,7 +365,7 @@ $(document).ready(function() {
     let tabID = $(this).data('location');
     let tabContent = $('[data-location-content="' + tabID + '"]');
     
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
@@ -391,7 +391,7 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
@@ -418,7 +418,7 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
@@ -446,7 +446,7 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
@@ -473,7 +473,7 @@ $(document).ready(function() {
     let tabContent = $('[data-location-content="' + tabID + '"]');
 
     
-    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.m4a"];
+    const audioFiles = ["./js/audio/sink1.m4a", "./js/audio/sink2.m4a", "./js/audio/sink3.m4a", "./js/audio/papertowel.m4a" , "./js/audio/shart.wav", "./js/audio/fart.wav", "./js/audio/fart2.mp3"];
     const randomIndex = Math.floor(Math.random() * audioFiles.length);
     const audio = new Audio (audioFiles[randomIndex]);
     audio.volume = 0.5;
