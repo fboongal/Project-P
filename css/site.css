@@ -190,7 +190,7 @@ h1, h2, h3, p {
 }
 
 
-
+/* comment section */
 .comment-section {
     background-color: #fff;
     padding: 60px;
@@ -291,18 +291,18 @@ button:hover {
     flex: 1;
 }
 
-.delete-button {
-    background-color: #dc3545;
+.delete-comment {
+    margin-left: 319px;
     border: none;
-    color: white;
-    padding: 5px 10px;
+    background-color: #007bff00; /* Adjust color as needed */
+    color: #dc3545;
     cursor: pointer;
+    padding: 5px;
     border-radius: 5px;
-    margin-left: 10px;
 }
 
-.delete-button:hover {
-    background-color: #c82333;
+.delete-comment:hover {
+    background-color: #773e44; /* Adjust hover color as needed */
 }
 
 /* Slideshow CSS */
@@ -485,16 +485,13 @@ https://www.youtube.com/watch?v=UTHgr6NLeEw */
 }
 
 /* DARC pin animation */
-.darcPin {
+.digitalArtsResearchCenterPin {
     /* listed in order: transition-property, transition-duration, and transition-timing-function  */
     transition: bounce 0.5s ease-in-out;
 }
 
-.darcPin:hover {
+.digitalArtsResearchCenterPin:hover {
     animation: bounce 0.5s ease-in-out;
-}
-infinite {
-    transform-origin: bottom;
 }
 
 @keyframes bounce {

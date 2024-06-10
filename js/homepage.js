@@ -573,60 +573,84 @@ $('.agtab').click(function() {
 // comment section
 let commentsData = {};
 
-        // Function to add a comment
-        function addComment(productId) {
-            const input = document.querySelector(`.comment-input[data-product-id="${productId}"]`);
-            const commentText = input.value.trim();
-
-            if (commentText) {
-                if (!commentsData[productId]) {
-                    commentsData[productId] = [];
-                }
-                commentsData[productId].push(commentText);
-                displayComments(productId);
-                input.value = '';
-            }
-        }
-
-        // Function to display comments for a product
-        function displayComments(productId) {
-            const commentsList = document.getElementById(`comments-${productId}`);
-            commentsList.innerHTML = '';
-
-            if (commentsData[productId]) {
-                commentsData[productId].forEach(comment => {
-                    const commentDiv = document.createElement('div');
-                    commentDiv.className = 'comment';
-                    commentDiv.textContent = comment;
-                    commentsList.appendChild(commentDiv);
-                });
-            }
-        }
-
-        // Event listener for submit buttons
-        document.querySelectorAll('.submit-comment').forEach(button => {
-            button.addEventListener('click', () => {
-                const productId = button.getAttribute('data-product-id');
-                addComment(productId);
-            });
-        });
-
-        // Display initial comments if any
-        document.addEventListener('DOMContentLoaded', () => {
-            Object.keys(commentsData).forEach(productId => {
-                displayComments(productId);
-            });
-        });
-
-// Function to delete a comment
-function deleteComment(index) {
-  let comments = JSON.parse(localStorage.getItem('comment')) || [];
-  comments.splice(index, 1); // Remove the comment at the specified index
-  localStorage.setItem('comments', JSON.stringify(comments)); // Save the updated comments array back to local storage
-  renderComments(); // Re-render the comments
+// Load comments from localStorage
+function loadComments() {
+    const storedComments = localStorage.getItem('commentsData');
+    if (storedComments) {
+        commentsData = JSON.parse(storedComments);
+    }
 }
 
-// Initial render of comments on page load
+// Save comments to localStorage
+function saveComments() {
+    localStorage.setItem('commentsData', JSON.stringify(commentsData));
+}
+
+// Function to add a comment
+function addComment(productId) {
+    const input = document.querySelector(`.comment-input[data-product-id="${productId}"]`);
+    const commentText = input.value.trim();
+
+    if (commentText) {
+        if (!commentsData[productId]) {
+            commentsData[productId] = [];
+        }
+        commentsData[productId].push(commentText);
+        saveComments();
+        displayComments(productId);
+        input.value = '';
+    }
+}
+
+// Function to delete a comment
+function deleteComment(productId, commentIndex) {
+    if (commentsData[productId]) {
+        commentsData[productId].splice(commentIndex, 1);
+        saveComments();
+        displayComments(productId);
+    }
+}
+
+// Function to display comments for a product
+function displayComments(productId) {
+    const commentsList = document.getElementById(`comments-${productId}`);
+    commentsList.innerHTML = '';
+
+    if (commentsData[productId]) {
+        commentsData[productId].forEach((comment, index) => {
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+
+            const commentText = document.createElement('p');
+            commentText.textContent = comment;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.className = 'delete-comment';
+            deleteButton.addEventListener('click', () => deleteComment(productId, index));
+
+            commentDiv.appendChild(commentText);
+            commentDiv.appendChild(deleteButton);
+            commentsList.appendChild(commentDiv);
+        });
+    }
+}
+
+// Event listener for submit buttons
+document.querySelectorAll('.submit-comment').forEach(button => {
+    button.addEventListener('click', () => {
+        const productId = button.getAttribute('data-product-id');
+        addComment(productId);
+    });
+});
+
+// Load and display initial comments from localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    loadComments();
+    Object.keys(commentsData).forEach(productId => {
+        displayComments(productId);
+    });
+});
 
 
 
