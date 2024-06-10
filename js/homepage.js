@@ -488,50 +488,50 @@ $('.agtab').click(function() {
 // comment section
 let commentsData = {};
 
-// Function to add a comment
-function addComment(productId) {
-    const input = document.querySelector(`.comment-input[data-product-id="${productId}"]`);
-    const commentText = input.value.trim();
+        // Function to add a comment
+        function addComment(productId) {
+            const input = document.querySelector(`.comment-input[data-product-id="${productId}"]`);
+            const commentText = input.value.trim();
 
-    if (commentText) {
-        if (!commentsData[productId]) {
-            commentsData[productId] = [];
+            if (commentText) {
+                if (!commentsData[productId]) {
+                    commentsData[productId] = [];
+                }
+                commentsData[productId].push(commentText);
+                displayComments(productId);
+                input.value = '';
+            }
         }
-        commentsData[productId].push(commentText);
-        displayComments(productId);
-        input.value = '';
-    }
-}
 
-// Function to display comments for a product
-function displayComments(productId) {
-    const commentsList = document.getElementById(`comments-${productId}`);
-    commentsList.innerHTML = '';
+        // Function to display comments for a product
+        function displayComments(productId) {
+            const commentsList = document.getElementById(`comments-${productId}`);
+            commentsList.innerHTML = '';
 
-    if (commentsData[productId]) {
-        commentsData[productId].forEach(comment => {
-            const commentDiv = document.createElement('div');
-            commentDiv.className = 'comment';
-            commentDiv.textContent = comment;
-            commentsList.appendChild(commentDiv);
+            if (commentsData[productId]) {
+                commentsData[productId].forEach(comment => {
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+                    commentDiv.textContent = comment;
+                    commentsList.appendChild(commentDiv);
+                });
+            }
+        }
+
+        // Event listener for submit buttons
+        document.querySelectorAll('.submit-comment').forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.getAttribute('data-product-id');
+                addComment(productId);
+            });
         });
-    }
-}
 
-// Event listener for submit buttons
-document.querySelectorAll('.submit-comment').forEach(button => {
-    button.addEventListener('click', () => {
-        const productId = button.getAttribute('data-product-id');
-        addComment(productId);
-    });
-});
-
-// Display initial comments if any
-document.addEventListener('DOMContentLoaded', () => {
-    Object.keys(commentsData).forEach(productId => {
-        displayComments(productId);
-    });
-});
+        // Display initial comments if any
+        document.addEventListener('DOMContentLoaded', () => {
+            Object.keys(commentsData).forEach(productId => {
+                displayComments(productId);
+            });
+        });
 
 // Function to delete a comment
 function deleteComment(index) {
